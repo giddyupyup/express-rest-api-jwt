@@ -15,5 +15,5 @@ export const signUp = (req: Request, res: Response) => {
     password: hashPassword,
   });
 
-  res.status(201).json({ message: 'User successfully created!', data: user });
+  res.status(201).json({ message: 'User successfully created!' });
 };

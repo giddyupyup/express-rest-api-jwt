@@ -7,8 +7,8 @@ import { verifyUsers } from '../middleware/users/verifyUsers';
 
 const authRoute = Router();
 
-authRoute.post('signup', verifyUsers({ isSignIn: false }), signUp);
-authRoute.post('signin', verifyUsers({ isSignIn: true }), signIn);
-authRoute.post('signout', jwtVerify, signOut);
+authRoute.post('/signup', verifyUsers({ isSignIn: false }), signUp);
+authRoute.post('/signin', verifyUsers({ isSignIn: true }), signIn);
+authRoute.post('/signout', jwtVerify, signOut);
 
 export default authRoute;
